@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>ระบุรายละเอียดการติดต่องาน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>วันที่จ้าง</ion-label>
+    <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="date"></ion-datetime>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>สถานที่ เวลา</ion-label>
+      <ion-input type="text" [(ngModel)]="location"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="energy" class="marginTop" (click)="add_work(date,location)">
+    <ion-icon name="add"></ion-icon>&nbsp; ส่งคำขอจ้างงาน
+  </button>
+
+</ion-content>

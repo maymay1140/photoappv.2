@@ -1,0 +1,46 @@
+page-welcome {
+    #welcome{
+        background: color($colors ,primary);
+        .h1t{
+            margin-left: auto;
+            margin-right: auto;
+            width: 6em;
+            font-size: 20px;
+            margin-top: 20px;
+            color: white;
+        }
+        .marginTop{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            margin-top: 20px;
+
+        }
+        .marginTop2{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .login{
+            margin-top: 20px;
+        }
+        .h2t{
+            margin-left: auto;
+            margin-right: auto;
+            width: 8em;
+            color: #ff3a3a;
+            margin-top: 20px;
+            font-size: 15px;
+
+        }
+
+        .logo{
+            height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+          
+        }
+    }
+}

@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>New Accouunt</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="assets/imgs/users.png" class="logo"/>
+    <div><ion-icon name="heart"></ion-icon>
+      Create Account
+    </div>
+  
+
+
+  <ion-list class="regispad">
+    <ion-item>
+      <ion-label fixed>Card-Id</ion-label>
+      <ion-input type="text" [(ngModel)]="card_id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-option value="1">Photography</ion-option>
+        <ion-option value="2">User</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button block color="energy" outline (click)="create(card_id,username,password,type)">Create</button>
+
+</ion-content>

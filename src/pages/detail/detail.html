@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>{{item.name}} {{item.surname}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="energy" class="marginTop" (click)="Contact_work(item)">
+    <ion-icon name="create"></ion-icon>&nbsp; ติดต่องาน
+  </button>
+  <ion-card >
+    <ion-item >
+    <ion-card-content>
+      <ion-card-title>
+       รายละเอียดช่างภาพ
+        </ion-card-title>
+      <h2>
+        เบอร์ติดต่อ: {{item.phone}}
+        
+      </h2>
+      <h2>
+        อีเมล์: {{item.email}}
+      </h2>
+    <h2>ผลงาน</h2>
+     <h2>ประเภทงาน: {{item.name_th}}</h2>
+     <h2>เรทราคาการจ้าง: {{item.price}}</h2>
+     <img src="http://localhost:82/wawebv.3/gallerypic/{{item.cover_pic}}"  height='200' width='100'> 
+     <h1 (click)="loadDetail(item)">click ดูแกลอรี่ภาพ</h1>
+    </ion-card-content>
+    </ion-item>
+  </ion-card>
+
+  <ion-card >
+    <ion-item *ngFor="let item of rowsDetail">
+      <img src="http://localhost:82/wawebv.3/gallerypic/Gallery/{{item.file_name}}"  height='200' width='100'> 
+    </ion-item>
+  </ion-card>
+
+</ion-content>
