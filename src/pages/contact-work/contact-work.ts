@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
+import { SearchWorkPage } from '../search-work/search-work';
 
 
 
@@ -25,19 +26,18 @@ item = {overview:''};
     console.log(this.item);
   }
 
-  add_work(date,location){
+  add_work(date,location,phone,item){
 
-    this.storage.get('id').then((val) => {
+      this.storage.get('id').then((val) => {
       console.log("user_id is", val);
-      let jsonData = { date: date, location: location, user_id: val, id_photo: this.item }; //สร้าง obj
+      let jsonData = { date: date, location: location,phone:phone, user_id: val, id_photo:item.id }; //สร้าง obj
       console.log(jsonData);
-      let url = 'http://localhost/servicephp/serviceattend.php'; //ให้ไป post ที่  url
+      let url = 'http://localhost:82/servicewa/request_work.php'; //ให้ไป post ที่  url
       this.http.post(url, jsonData,).subscribe((data: any) => {
-        // console.log(jsonData);
-        alert("บันทึกเรียบร้อยแล้ว");
-        this.navCtrl.push(MenuteacherPage)
-        console.log(data);
-      
+
+        alert("ส่งคำขอไปเรียบร้อยแล้ว รอการติดต่อกลับจากช่างภาพ");
+         this.navCtrl.push(SearchWorkPage)
+        // console.log(data);
       });
     
       //method post รับค่ามา 2 ค่า คือ url เว็บที่ต้องการโพสไป , obj 

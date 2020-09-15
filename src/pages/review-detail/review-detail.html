@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>กรอกรายระเอียดรีวิว</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card >
+    <ion-item >
+    <ion-card-content>
+      <ion-card-title>
+       รายละเอียดช่างภาพ
+        </ion-card-title>
+        <h2>ชื่อจริง - นามสกุล : {{item.name}} {{item.surname}} </h2>
+      <h2>
+        วันที่จ้าง: {{item.date}}
+      </h2>
+      <h2>
+        สถานที่จ้าง: {{item.location}}
+      </h2>
+    </ion-card-content>
+    </ion-item>
+  </ion-card>
+
+  
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>กรอกคะแนน</ion-label>
+      <ion-input type="text" [(ngModel)]="point"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>กรอกรายละเอียดเพิ่มเติม</ion-label>
+      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="energy" class="marginTop" (click)="reviewsSave(point,description,item)">
+    <ion-icon name="add"></ion-icon>&nbsp; บันทึกการรีวิว
+  </button>
+
+</ion-content>

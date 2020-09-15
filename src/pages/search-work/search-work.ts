@@ -2,14 +2,8 @@ import { DetailPage } from './../detail/detail';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { MenuUserPage } from '../menu-user/menu-user';
 
-
-/**
- * Generated class for the SearchWorkPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -68,7 +62,9 @@ this.loadprovince();
   Detail(item){
     this.navCtrl.push(DetailPage,item);
   }
-
+  HomeMenu(){
+    this.navCtrl.push(MenuUserPage);
+  }
   
 
 

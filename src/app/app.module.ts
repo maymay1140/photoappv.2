@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -21,6 +22,12 @@ import { SearchWorkPage } from '../pages/search-work/search-work';
 import { DetailPage } from '../pages/detail/detail';
 import { ReviewGallPage } from '../pages/review-gall/review-gall';
 import { ContactWorkPage } from '../pages/contact-work/contact-work';
+import { MenuContactPage } from '../pages/menu-contact/menu-contact';
+import { MenuRequestPage } from '../pages/menu-request/menu-request';
+import { ReviewPhotoPage } from '../pages/review-photo/review-photo';
+import { ReviewDetailPage } from '../pages/review-detail/review-detail';
+import { ViewReviewPage } from '../pages/view-review/view-review';
+import { ReportWorkPage } from '../pages/report-work/report-work';
 
 
 
@@ -39,6 +46,12 @@ import { ContactWorkPage } from '../pages/contact-work/contact-work';
     DetailPage,
     ReviewGallPage,
     ContactWorkPage,
+    MenuContactPage,
+    MenuRequestPage,
+    ReviewPhotoPage,
+    ReviewDetailPage,
+    ViewReviewPage,
+    ReportWorkPage,
 
   ],
   imports: [
@@ -62,6 +75,12 @@ import { ContactWorkPage } from '../pages/contact-work/contact-work';
     DetailPage,
     ReviewGallPage,
     ContactWorkPage,
+    MenuContactPage,
+    MenuRequestPage,
+    ReviewPhotoPage,
+    ReviewDetailPage,
+    ViewReviewPage,
+    ReportWorkPage,
     
   ],
   providers: [

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>รายการจ้างช่างภาพ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="status_c">
+    <ion-card-header>
+      Status สถานะของงาน
+    </ion-card-header>
+    <ion-card-content>
+    0:รอการอนุมัติ     1:อนุมัติแล้ว     2:ปฏิเสธ     3:งานเสร็จสิ้น
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of datarequest">
+    <ion-item>
+     รหัสการจอง: {{item.id}}
+    </ion-item>
+    <ion-item>
+      ช่างภาพ: {{item.name}} {{item.surname}}
+     </ion-item>
+     <ion-item>
+      วันที่ต้องการจอง: {{item.date}}
+     </ion-item>
+     <ion-item>
+      สถานที่ เวลา: {{item.location}}
+     </ion-item>
+     <ion-item>
+      เบอร์ติดต่อ: {{item.phone}}
+     </ion-item>
+     <ion-item>
+      สถานะของงาน: {{item.status}}
+     </ion-item>
+  </ion-card>
+
+
+
+</ion-content>

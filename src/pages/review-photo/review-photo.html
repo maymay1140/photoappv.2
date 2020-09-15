@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>รีวิวช่างภาพ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)=" HomeMenu()">
+    <ion-icon name="home"></ion-icon> &nbsp; &nbsp; HomeMenu
+  </button>
+  <h1>รายการที่สามารถรีวิวได้</h1>
+  <ion-card *ngFor="let item of rowsComplete">
+    <ion-item>
+      <h2>ช่างภาพ : {{item.name}} {{item.surname}} </h2>
+      <h2>สถานที่ เวลา : {{item.location}} </h2>
+      <h2>วันที่ : {{item.date}} </h2>
+      <h2>สถานะงาน : เสร็จสิ้น</h2>
+      <button ion-button color="energy" id="login" class="marginTop" (click)="Review(item)">
+        <ion-icon name="create"></ion-icon>&nbsp; รีวิวช่างภาพ
+      </button>
+    </ion-item>
+  </ion-card>
+
+
+
+
+</ion-content>

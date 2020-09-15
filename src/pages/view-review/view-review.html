@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>รีวิวของตนเอง</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)=" HomeMenu()">
+    <ion-icon name="home"></ion-icon> &nbsp; &nbsp; HomeMenu
+  </button>
+<h1>รายละเอียดการรีวิว</h1>
+<ion-card *ngFor="let item of rowData">
+  <ion-item>
+    <h2>ชื่อจริง - นามสกุล : {{item.name}} {{item.surname}} </h2>
+    <h2>คะแนน : {{item.point}} </h2>
+    <h2>รายละเอียด : {{item.description}} </h2>
+  </ion-item>
+</ion-card>
+</ion-content>
